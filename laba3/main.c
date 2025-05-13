@@ -7,7 +7,11 @@
 #include <stdio.h>
 
 int main() {
-    int z, x, c, v;
+    //Следующие переменные будут использованны как память вводимых с клавиатуры чисел
+    int z;
+    int x;
+    int c;
+    int v;
     system("chcp 1251");
     system("cls");
     printf("Введите переменные: \n");
