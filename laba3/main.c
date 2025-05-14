@@ -2,38 +2,32 @@
 // Выполнили студенты группы 24ВВВ3
 // Кукушкин А.А, Жуков А.А, Азаров М.С.
 #define _CRT_SECURE_NO_WARNINGS
-#include <conio.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 int main() {
-    //Следующие переменные будут использованны как память вводимых с клавиатуры чисел
     int z;
     int x;
     int c;
     int v;
+	
+    srand(time(0));
+
+    int array[10];
+
+
     system("chcp 1251");
     system("cls");
-    printf("Введите переменные: \n");
-    scanf("%d %d %d %d", &z, &x, &c, &v);
-    // поиск пар отрицательных чисел
-    if (a < 0 && b < 0) {
-        printf("Пара отрицательных чисел: %d и %d\n", z, x);
+
+    for (int i = 0; i < 10; i++) {
+        array[i] = rand() % 49 - 40; 
     }
-    if (a < 0 && c < 0) {
-        printf("Пара отрицательных чисел: %d и %d\n", z, c);
+
+    printf("Элементы массива:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("array[%d] = %d\n", i, array[i]);
     }
-    if (a < 0 && d < 0) {
-        printf("Пара отрицательных чисел: %d и %d\n", z, v);
-    }
-    if (b < 0 && c < 0) {
-        printf("Пара отрицательных чисел: %d и %d\n", x, c);
-    }
-    if (b < 0 && d < 0) {
-        printf("Пара отрицательных чисел: %d и %d\n", x, v);
-    }
-    if (c < 0 && d < 0) {
-        printf("Пара отрицательных чисел: %d и %d\n", c, v);
-    }
+
     return 0;
 }
